@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.App {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.current_date {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  z-index: 999;
+  width: auto;
+  right: 2%;
+  top: 1%;
+}
+
+
+.gallery {
+width: 80%;
+margin: 5% 10%;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-gap: 2rem;
+}
+
+.gallery_img:hover {
+  border: 5px solid yellow;
+  cursor: pointer;
+ transform: rotate(45deg);
+}
+
+.gallery_img {
+  transition: transform ease 0.3s;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  border: 5px solid darkgray;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+.gallery figure:nth-child(4n+1) {
+	border-color: red;
+}
+
+@media screen and (max-width: 1200px) {
+  .gallery_img {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 10%;
+  }
+}
