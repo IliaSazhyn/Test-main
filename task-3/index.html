@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <title>Test-3</title>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <p id="count" class="text-right"></p>
+      <h1>University Hipolabs Search</h1>
+
+      <div>
+        <input
+          type="text"
+          id="inp"
+          name="str"
+          value=""
+          placeholder="major or country name"
+          required
+        />
+        <button id="submit">submit</button>
+        <button id="clear">clear search results</button>
+      </div>
+
+      <div id="tableArea">
+        <table id="table">
+          <thead>
+            <tr>
+              <th>&numero;</th>
+              <th>Website:</th>
+              <th>Country code:</th>
+              <th>Country:</th>
+              <th>University:</th>
+              <th>Save</th>
+            </tr>
+          </thead>
+          <tbody id="fetchTable"></tbody>
+        </table>
+
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
